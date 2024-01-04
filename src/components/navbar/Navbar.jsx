@@ -1,16 +1,18 @@
 import React from 'react';
-import { SunMoon } from 'lucide-react';
+import { SunMoon, Menu } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/Button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   return (
     <div className=' h-20  w-full px-10 md:px-20 py-8 flex justify-between items-center shadow-lg'>
-      <SunMoon className='cursor-pointer' />
+      <SunMoon className='cursor-pointer hidden md:block' />
+      <Menu className='md:hidden' onClick={toggleSidebar} />
+
       <div className='flex w-full max-w-sm items-center justify-center space-x-2'>
         <Input className=' w-42  md:w-96 outline-none ' placeholder='Search' />
-        <Button type='submit' className='hidden md:block '>
+        <Button type='submit' className='hidden md:block bg-[#7E2553] '>
           Search
         </Button>
       </div>
