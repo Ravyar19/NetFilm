@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
-const SideBar = ({ isSidebarOpen }) => {
+const SideBar = () => {
   return (
-    <Card className={`md:block w-64 h-screen ${isSidebarOpen ? '' : 'hidden'}`}>
+    <Card className='lg:block w-64 h-screen hidden'>
       <CardContent className='p-0 m-0 '>
         <h1 className='text-center py-6 text-4xl font-mono uppercase text-[#1D2B53] '>
           NetFilm
